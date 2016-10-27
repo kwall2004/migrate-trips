@@ -1,7 +1,7 @@
 var request = require('request');
 var elasticsearch = require('elasticsearch');
 
-var token = 'rujhU_ZeTFgC8nnrGS3fJQ9SnmbmNRSDKd6WrSLdKljb6HMd_4hBeRGItvC68NDfyuPvSmOILBeGSJtDrMdr27ZnSTnDBOKFSsR9xftz5RMr_DOH6ZBEXa5Xm61LXGGx01T2rXTIZSOc2_hMMMAwJ1JMbF_yJjHqdCsQ4dAiLHj6rhOBwhtpE4gh3-3MZ9udnWu9eHXzvn59vX015hqsymqCfez3tdBueLUz5O9FRB-STGWQrlHQhq7naXLth9DZvbjvtkPV4Wv-KRoRyI1WQwWXBNeOUxYK7loght_zrMra3DWwzJlLe3aAnrcHzq0cFHpyWfWdmPZUmMWq6RLZc1alPVm1O3khISOxq6Xswdb2tbvKcG-eZ3Y20b53NltZcJd-GwkeIcL11j8IAYpk2CHXdESFlXlAqwLeQnZyVuhU-B2108RcnCwAAb4xnJKhY_Io13EbQ1bwTbwdy4AoujEIHBHjMKuEJQbf4GCfy3U_AqABXZ1ouA0r4D-a-FUA4mmuHCVvaSX5Z7ZAQcft7ENrY8bU1jjqQLe2WXjiD9DxLae9dUtsagBH2aCfGK9cBW6qe_6Kw7C_3X7Hex4m0BGf8HpU7Ttw1I7u6IAo0aIJiRo-CwzOeOMstyLKLLapNsi0WZvfEZq2qCmgfXDUlKiSX0mwEcGXCBNfQXR5AG__df4eHHtGQp6vBHkB9oRnEQiJESoUxuXbW3gSdRBZPEGIU0iCKSfYuW1nCJzkIFXoPKP6AVU_ArrOGibMvRkTOgOz9aGBVBON2JpjmgWReKziKwgR5ni5lvYJTX7l4n6n38sX7UWGPxARTgyhQgHIPFp7j-QZlYLFm55QmGzR03l84Au8zkgMPtlNOq1Jq3jMva9FrlHeD5ARaoiGyfx3V1ui3213xp8xYnYqaWgt7udJ4jVNkSzlNI4BH2dYscYLxxtlJ9wpCL1januKJtXVyN7bJVM8vX5ZGYZfuE3CXjFxWwmviuPRg6f8kMDMEPXGIsW1xBS5hVmiUciY7C7F2eYTwLhaH4rOHgdNLjOcG-9pK1PDJIlHKh1t8Icv2ewuLfTRi8awnx-Ne0A2318tVWvGI21me-FmYUXjpSvBgWIy5u6Uhq7sba_BJHxjaFWssEHiYx3hubBjMgLUC_1ZP4i-Vk4soDzn32yBpaDtbfwnw3S7WiBkIk0b4s998pFMH_XFqPW2-OPafM8z3PLpOoAecEZDNN-qt0aKSmBlAI3DEw-ZiTmpyLarTuw8lUfNFgprZe_CGdiOnV_PbvJifx8sM9PPuIz5f9kJSpctjY_JvuIAw7sMpD4z1asMRNZ6maQdfYsNGb6s1L_sRv6P8e2k5jjGM5RQuCtQQI8JqBeA0pDvPhKgDMjLoH9FhkMgGqjTUppSlmHLdUWqigBYwwuqSaiHu425XiG3A0NawdCGP1BcJTMqtUBlbiVAxMANpkqNb73DSizXzExbK3j_tc6p4xGqyPr7gHhprBcr1Oa5RMRlY00p3eLqiurNZ8eceM16XqZ6v1S3ip7JjhNjfLCZxfXO9rPjRkRRAqUoXGHcIewVWgQOylr9JpYvdRiuBA5ElEYs1vFRE5Za9sjL';
+var token = '8nOtwI7LKKMk-WYdOnDZylrVQNiBc2-BJGUk0NoTwPlWqhXVA2Z0pyNctYZikcnP_CEZIXMGCgjXDqUABInxYkSbwuKg3D7fzcx3pBVJTaMq6lnxD1zQPBx-z6YLM0La_wuxnt9Ggzhm-GvkXhiR1wUZuVbTmw7Z7-UI9RI8nxftPRML55nDWhSjFt-mnmSb2WC9r5h5Dbj1tjqVFIXrVE4hc9CvxsoHSmA62fjHwnMrvU7HaBWk2sKIoykzT0hGfizUPiwOjZANoFLgxJ8GN_QVmgAjZRE903Ai5pTUUTzDb009wf-A4qlFhYWCEi9_9xULH2FBIEAlSY6j61I_IdftU0ZE_f4uHxuhXJc4m-9rEuNtSLjv4Hl0q5jIvhLFf-WZAJJFzd01W4_R3h5hxyt4pWbNt8FtowFjuM3QiW2MkXr2pQMvZPPxC1dn4xHyQ32T4uy2SPwrZRDGuFtUj1ttw46uX6tQc87EbkR1sPaTCdOVYoS5MAeYX9v1WfZSP1wME25f6Qoz4AOVoAVN16Q34CttsBxiO6u3NTce88xXNbZEW-7rD9t7QebRbWONatAQioAN0sTzu-KMVmwl9lMv2WgUsGkgQLvmzI9-YzjOXYZzzr_Iwrrb3SNsDuxcsEYbtzKWYlm2zYSy4TV38jVx6RPYJUvAAZzkzPMSdErS0_AAj2l96hGg-ibC2Uqs5q9YrqBdLDilxsOEjHmKduaQr6o-L7B4i1DftPrLQABoxZ9nzH0GygzchrYXi8KfMyorvLofQGql4sT7OR9s7su4RMY4wSanuejUhho2Zl_pwFstoBWT5lXf2Hco_c2XIU9QFWXF2qD_U38K1m36FHaQyED_n9l1fIkcOHni6-DiTHCZiuGkP0K1c_wcP7SOypnlzXG9opsB1un_13HeO52xILj1gs4OBAWVk6-cMhO73kBXV-J_4We3wrjERd7wdAMY-my7_OF52h8-iwKAZo_ARX_yi6GGC6gp2PaH2A3AKGlKuj1vz1i9rHfnqUX74bVCt4xJZG5kWVdsv8oSeLcnptRoOqWScZFNIykgpLgsSXVGIJ172Hg9PmrJflPh1SDOiLzjUZs5SDTqMjInnj5_dGpVMONaz0m5qXt8HPc_Xx4E_X5JZW3oHwCJaOg3oKkQAHq3viyDzhb_8Ek182jbE2kpK8Uz7DIxwDAA7oV1XVwQuH_Uyg6OjO-TbBDbEIRhgUa9HDosc1GfP4apCwVnFLYgclcLGAIunRKdC9JPUhTb_Sie5CTxEj30ZLYQsF0JiwgROzlQnPAA7sRF-l5Jk6BvHR1l5XmisHKNRRfT_voBcyRzbiY2EXo0gYynTq8xurXqRXk2wi5u_LQMWGlw5Le7NcgBCvDxl1Ht5S_MW3z50AJI3vuBUamDPc6FlTGSNfo23li5V2RwPLYHhIDlFvw_rEras808QdEfRPUW0QYxhUBSx1QbnVP2BB0RmCI2kRcthMqKEb-rTs8EgvNEUG__yogmZQ6NGgGI4PnZsjMajP9k0UfSd1T8GJzGPaGCzMdEjCa5G3I3Te2oZECBvNrIAVQHRyZAyo4cgYhogvBpKHIyU9Wu7qDmZxuy';
 
 var client = new elasticsearch.Client();
 client.indices.exists(
@@ -19,32 +19,28 @@ client.indices.exists(
           index: 'vision',
           body: {
             mappings: {
-              trip: {
+              message: {
                 properties: {
-                  data: {
-                    properties: {
-                      m12: {
-                        type: 'double'
-                      },
-                      m13: {
-                        type: 'double'
-                      },
-                      x: {
-                        type: 'double'
-                      },
-                      y: {
-                        type: 'double'
-                      },
-                      z: {
-                        type: 'double'
-                      },
-                      l: {
-                        type: 'double'
-                      },
-                      n: {
-                        type: 'double'
-                      }
-                    }
+                  m12: {
+                    type: 'double'
+                  },
+                  m13: {
+                    type: 'double'
+                  },
+                  x: {
+                    type: 'double'
+                  },
+                  y: {
+                    type: 'double'
+                  },
+                  z: {
+                    type: 'double'
+                  },
+                  l: {
+                    type: 'double'
+                  },
+                  n: {
+                    type: 'double'
                   }
                 }
               }
@@ -67,9 +63,12 @@ client.indices.exists(
 );
 
 function migrate() {
+  var vehicleId = '105342';
+  var date = '2016-05-20';
+
   request.get(
     {
-      url: 'http://localhost:65027/api/Trips/GetTrips?VehicleId=105342&SelectedDate=2016-05-20',
+      url: 'http://localhost:65027/api/Trips/GetTrips?VehicleId=' + vehicleId + '&SelectedDate=' + date,
       auth: {
         bearer: token
       }
@@ -81,12 +80,12 @@ function migrate() {
       }
 
       if (response.statusCode == 200) {
-        var data = JSON.parse(body);
-        data.forEach(function (element) {
-          console.log(element.trip.tripId);
+        var trips = JSON.parse(body);
+        trips.forEach(function (trip) {
+          console.log(trip.trip.tripId);
           request.get(
             {
-              url: 'http://localhost:65027/api/Trips/GetTripJsonData?TripId=' + element.trip.tripId,
+              url: 'http://localhost:65027/api/Trips/GetTripJsonData?TripId=' + trip.trip.tripId,
               auth: {
                 bearer: token
               }
@@ -99,23 +98,32 @@ function migrate() {
 
               if (response.statusCode == 200) {
                 var data = JSON.parse(body);
-                var body = Object.assign({}, element.trip, { data: data });
-                console.log(body);
-                // client.index(
-                //   {
-                //     index: 'vision',
-                //     type: 'trip',
-                //     body: body
-                //   },
-                //   function (error, response) {
-                //     if (error) {
-                //       console.error(error.response);
-                //       throw new Error();
-                //     }
-                //
-                //     console.log(response);
-                //   }
-                // );
+                data.forEach(function (element) {
+                  var body = Object.assign(
+                    {
+                      tripId: trip.trip.tripId.toString(),
+                      vehicleId: vehicleId,
+                      tripNumber: trip.trip.tripNumber.toString()
+                    },
+                    element
+                  );
+                  // console.log(body);
+                  client.index(
+                    {
+                      index: 'vision',
+                      type: 'message',
+                      body: body
+                    },
+                    function (error, response) {
+                      if (error) {
+                        console.error(error.response);
+                        throw new Error();
+                      }
+
+                      console.log(response);
+                    }
+                  );
+                });
               }
             }
           );
